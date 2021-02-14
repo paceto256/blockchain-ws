@@ -1,0 +1,23 @@
+{
+  "name": "blockchain-ws",
+  "version": "1.0.0",
+  "description": "blockchain-ws",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod": "forever start -c 'node --expose-gc --max_old_space_size=64000' src/index.js",
+    "prod:stop": "forever stopall",
+    "prod:restart": "forever stopall && npm run prod",
+    "start": "nodemon --ignore src/index.js"
+  },
+  "author": "PACETO",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "bcrypto": "^5.4.0",
+    "bhn": "0.0.2",
+    "bval": "^0.1.6",
+    "nodemon": "^2.0.6",
+    "ws": "^7.4.2"
+  }
+}
