@@ -44,7 +44,7 @@ async function startNode(config) {
 await startNode();
 
 const wss = new WebSocket.Server({
-  port: 8080,
+  port: 8000,
   perMessageDeflate: {
     zlibDeflateOptions: {
       // See zlib defaults.
