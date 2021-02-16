@@ -26,7 +26,6 @@ async function startNode(config) {
     } else {
       console.log('createXsecondsBeforeTheStart', createXsecondsBeforeTheStart);
     }
-
   })
 
   try {
