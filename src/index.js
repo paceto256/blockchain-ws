@@ -76,7 +76,7 @@ wss.on('connection', function connection(ws) {
     try {
       data = JSON.parse(message);
     } catch (e) {
-
+      ws.send(JSON.stringify({err: "unknown command"}))
     }
 
     if (data.subscribe === 'blocks') {
@@ -85,7 +85,7 @@ wss.on('connection', function connection(ws) {
         console.log('subscribed', message);
       }
     } else {
-      CLIENTS[ws.wsId].send(JSON.stringify({err: "unknown command"}))
+      ws.send(JSON.stringify({err: "unknown command"}))
     }
 
   });
