@@ -84,6 +84,8 @@ wss.on('connection', function connection(ws) {
         ws.channels.push('blocks');
         console.log('subscribed', message);
       }
+    } else {
+      CLIENTS[ws.wsId].send(JSON.stringify({err: "unknown command"}))
     }
 
   });
