@@ -6,7 +6,7 @@ const started = + new Date();
 async function startNode(config) {
   let node = new BHN({
     // network: 'testnet',
-    // startHeight: 524000
+    startHeight: 670843
   })
 
   process.on('unhandledRejection', err => {

@@ -6,10 +6,10 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prod": "BCOIN_START_HEIGHT=670000 forever start -c 'node --expose-gc --max_old_space_size=64000' src/index.js",
+    "prod": "forever start -c 'node --expose-gc --max_old_space_size=64000' src/index.js",
     "prod:stop": "forever stopall",
     "prod:restart": "forever stopall && npm run prod",
-    "start": "BCOIN_START_HEIGHT=670000 nodemon --ignore src/index.js"
+    "start": "nodemon --ignore src/index.js"
   },
   "author": "PACETO",
   "license": "UNLICENSED",
