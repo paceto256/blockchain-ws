@@ -69,7 +69,7 @@ const wss = new WebSocket.Server({
 wss.on('connection', function connection(ws) {
   const wsId = (+ new Date()).toString() + Math.random().toString()
   ws.wsId = wsId;
-  ws.channels = ['blocks'];
+  ws.channels = [];
   ws.on('message', function incoming(message) {
     let data = {};
 
